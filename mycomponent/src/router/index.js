@@ -16,12 +16,17 @@ const routes = [
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import('@/components/ScreenShotUpload.vue')
+    component: () => import('@/components/ScreenShotUpload')
   },
   {
     path: '/AutoLayout',
     name: 'AutoLayout',
-    component: () => import('@/components/AutoLayout.vue')
+    component: () => import('@/components/AutoLayout')
+  },
+  {
+    path: '/SuccessTick',
+    name: 'SuccessTick',
+    component: () => import('@/components/SuccessTick')
   }
 ]
 

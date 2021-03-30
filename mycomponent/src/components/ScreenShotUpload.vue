@@ -61,7 +61,7 @@
         </div>
         <div style="position: fixed; bottom:20px; left: 38%;">
           <el-button type="primary" style="margin-right:200px;" @click="$router.push('/')">home</el-button>
-          <el-button type="primary" @click="$router.push('/AutoLayout')">next</el-button>
+          <el-button type="primary" @click="$router.push('/SuccessTick')">next</el-button>
         </div>
     </div>
 </template>

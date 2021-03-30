@@ -26,7 +26,12 @@ export default {
           function: '截图上传',
           description: '截图上传，在上传图片前可先对图片进行剪切，再上传。',
           link: '/ScreenShotUpload'
-        }, 
+        },
+        {
+          function: '成功打钩动画',
+          description: '操作完成，显示成功打钩效果。',
+          link: '/SuccessTick'
+        },  
         {
           function: '布局调整',
           description: '布局调整，根据电脑屏幕分辨率，调整布局。',
@@ -34,6 +39,11 @@ export default {
         },
         ]
     };
+  },
+  created() {
+    this.$axios.get("./lang/en.json").then(res=>{
+      console.log(res)
+    })
   },
   methods: {
     gotoPage(row)
