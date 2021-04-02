@@ -33,9 +33,14 @@ export default {
           link: '/SuccessTick'
         },  
         {
-          function: '布局调整',
+          function: '布局调整（待完成）',
           description: '布局调整，根据电脑屏幕分辨率，调整布局。',
           link: '/AutoLayout'
+        },
+        {
+          function: '上传图片并可拖拽排序',
+          description: '上传图片，可拖拽进行排序。',
+          link: '/UploadImgAndDragSort'
         },
         ]
     };

@@ -27,6 +27,11 @@ const routes = [
     path: '/SuccessTick',
     name: 'SuccessTick',
     component: () => import('@/components/SuccessTick')
+  },
+  {
+    path: '/UploadImgAndDragSort',
+    name: 'UploadImgAndDragSort',
+    component: () => import('@/components/UploadImgAndDragSort')
   }
 ]
 
