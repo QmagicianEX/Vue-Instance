@@ -32,6 +32,11 @@ const routes = [
     path: '/UploadImgAndDragSort',
     name: 'UploadImgAndDragSort',
     component: () => import('@/components/UploadImgAndDragSort')
+  },
+  {
+    path: '/UploadProgress',
+    name: 'UploadProgress',
+    component: () => import('@/components/UploadProgress')
   }
 ]
 

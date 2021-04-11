@@ -5,9 +5,9 @@
     <el-table :data="tableData" border style="width: 80%; margin-left: 10%;" >
     <el-table-column prop="function" label="功能" min-width="20%" align="center">
     </el-table-column>
-    <el-table-column prop="description" label="描述" min-width="65%" align="center">
+    <el-table-column prop="description" label="描述" min-width="60%" align="center">
     </el-table-column>
-    <el-table-column prop="link" label="跳转" min-width="15%" align="center">
+    <el-table-column prop="link" label="跳转" min-width="20%" align="center">
       <template slot-scope="scope">
         <el-button type='primary' @click="gotoPage(scope.row)">{{scope.row.function}}</el-button>
       </template>
@@ -42,13 +42,18 @@ export default {
           description: '上传图片，可拖拽进行排序。',
           link: '/UploadImgAndDragSort'
         },
+        {
+          function: '上传文件进度',
+          description: '上传图片，显示上传进度效果。',
+          link: '/UploadProgress'
+        },
         ]
     };
   },
   created() {
-    this.$axios.get("./lang/en.json").then(res=>{
-      console.log(res)
-    })
+    // this.$axios.get("./lang/en.json").then(res=>{
+    //   console.log(res)
+    // })
   },
   methods: {
     gotoPage(row)
