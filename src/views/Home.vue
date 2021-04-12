@@ -47,6 +47,11 @@ export default {
           description: '上传图片，显示上传进度效果。',
           link: '/UploadProgress'
         },
+        {
+          function: '图片放大预览',
+          description: '图片放大预览。',
+          link: '/PicZoom'
+        },
         ]
     };
   },

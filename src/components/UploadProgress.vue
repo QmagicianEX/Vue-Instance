@@ -23,8 +23,8 @@
 							<v-hover-mask>
 								<img :src="item.url" width="100" height="100" />
 							</v-hover-mask>
-              <div v-if="hideProgress(item.progress)" :style="{'top': (100-Math.ceil(item.progress))+'%'}" style="position: absolute; background-color: gray; opacity: 0.7; width: 100px; height: 100px"></div>
-              <div v-if="hideProgress(item.progress)" style="position: absolute; top: 40px; left: 30%; color: white; font-weight: 700">{{Math.ceil(item.progress) }}%</div>
+              <div v-if="!hideProgress(item)" :style="{'top': (100-Math.ceil(item.progress))+'%'}" style="position: absolute; background-color: #000; opacity: 0.3; width: 100px; height: 100px"></div>
+              <div v-if="!hideProgress(item)" style="position: absolute; top: 40px; left: 30%; color: white; font-weight: 700">{{Math.ceil(item.progress) }}%</div>
 					</div>
 				</transition-group>
 			</draggable>
@@ -32,7 +32,7 @@
 
     <div style="position: fixed; bottom:20px; left: 38%;">
 			<el-button type="primary" style="margin-right:200px;" @click="$router.push('/')">home</el-button>
-			<!-- <el-button type="primary" @click="$router.push('/UploadProgress')">next</el-button> -->
+			<el-button type="primary" @click="$router.push('/PicZoom')">next</el-button>
     </div>
   </div>
 </template>
@@ -49,7 +49,6 @@ export default {
 
   data() {
     return {
-      isShowProgress: true,
       fileList: [],
       tmpFileList: []
     }
@@ -71,7 +70,8 @@ export default {
         this.tmpFileList.push({
           name: file.name,
           url: event.target.result,
-          progress: 0
+          progress: 0,
+          complete: false
         })
 			};
 			reader.readAsDataURL(file);
@@ -82,11 +82,11 @@ export default {
       this.tmpFileList[index]['progress'] = event.percent
     },
 
-    hideProgress(progress) {
-      if (Math.ceil(progress) === 100) {
-        setTimeout(()=>this.isShowProgress=false, 500)
+    hideProgress(item) {
+      if (Math.ceil(item.progress) === 100) {
+        setTimeout(()=>item.complete=true, 500)
       }
-      return this.isShowProgress
+      return item.complete
     }
   }
 }
