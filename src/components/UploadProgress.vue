@@ -49,7 +49,6 @@ export default {
 
   data() {
     return {
-      isShowProgress: true,
       fileList: [],
       tmpFileList: []
     }
@@ -84,9 +83,10 @@ export default {
 
     hideProgress(progress) {
       if (Math.ceil(progress) === 100) {
-        setTimeout(()=>this.isShowProgress=false, 500)
+        setTimeout(()=>{}, 500)
+        return false
       }
-      return this.isShowProgress
+      return true
     }
   }
 }
