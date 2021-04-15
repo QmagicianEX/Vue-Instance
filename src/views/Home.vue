@@ -56,11 +56,30 @@ export default {
     };
   },
   created() {
+    console.log(this.getCombination([['1', '2'], ['1']]))
     // this.$axios.get("./lang/en.json").then(res=>{
     //   console.log(res)
     // })
   },
   methods: {
+    getCombination(array) {
+    let result = [];
+    array.forEach((arrItem) => {
+      if (result.length === 0) {
+        result = arrItem;
+      } else {
+        const emptyArray = [];
+        result.forEach((item) => {
+          arrItem.forEach((value) => {
+            emptyArray.push([...item, value]);
+          });
+        });
+        result = emptyArray;
+      }
+    });
+    return result;
+  },
+
     gotoPage(row)
     {
       console.log(row);
