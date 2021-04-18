@@ -52,11 +52,21 @@ export default {
           description: '图片放大预览。',
           link: '/PicZoom'
         },
+        // {
+        //   function: '表格错位',
+        //   description: '嵌套表格错位问题。',
+        //   link: '/TableDislocation'
+        // },
+        {
+          function: '动态表单',
+          description: '动态表单。',
+          link: '/VmodelObject'
+        },
         ]
     };
   },
   created() {
-    console.log(this.getCombination([['1', '2'], ['1']]))
+    // console.log(this.getCombination([['1', '2'], ['1']]))
     // this.$axios.get("./lang/en.json").then(res=>{
     //   console.log(res)
     // })
@@ -82,7 +92,7 @@ export default {
 
     gotoPage(row)
     {
-      console.log(row);
+      // console.log(row);
       this.$router.push({path:row.link});
     }
   },

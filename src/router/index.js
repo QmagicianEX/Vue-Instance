@@ -42,6 +42,16 @@ const routes = [
     path: '/PicZoom',
     name: 'PicZoom',
     component: () => import('@/components/PicZoom')
+  },
+  {
+    path: '/TableDislocation',
+    name: 'TableDislocation',
+    component: () => import('@/components/TableDislocation')
+  },
+  {
+    path: '/VmodelObject',
+    name: 'VmodelObject',
+    component: () => import('@/components/VmodelObject')
   }
 ]
 
