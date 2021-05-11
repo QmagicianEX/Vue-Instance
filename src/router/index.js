@@ -57,6 +57,11 @@ const routes = [
     path: '/InfiniteScroll',
     name: 'InfiniteScroll',
     component: () => import('@/components/InfiniteScroll')
+  },
+  {
+    path: '/Transition',
+    name: 'Transition',
+    component: () => import('@/components/Transition')
   }
 ]
 

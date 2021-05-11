@@ -1,4 +1,5 @@
 <template>
+  <div>
   <div id="box">
     <div class="box" v-infinite-scroll="load" infinite-scroll-disabled="disabled" >
         <ul class="list" >
@@ -8,6 +9,11 @@
           <span></span>
         </p>
         <p v-if="noMore" style="margin-top:10px;font-size:13px;color:#ccc">没有更多了</p>
+    </div>
+  </div>
+  <div style="left: 38%;">
+      <el-button type="primary" style="margin-right:200px;" @click="$router.push('/')">home</el-button>
+      <el-button type="primary" @click="$router.push('/AutoLayout')">next</el-button>
     </div>
   </div>
 </template>
@@ -46,7 +52,7 @@ export default {
     getMessage() {
       console.log(this.count)
       this.list = this.list.concat([{noticeTitle: this.count}]); //因为每次后端返回的都是数组，所以这边把数组拼接到一起
-      this.totalPages = 38;
+      this.totalPages = 100;
       this.loading = false;
     }
   }
@@ -55,14 +61,14 @@ export default {
  
 <style scoped>
 #box{
-    width: 100%;
-  height: 100%;
-  position: absolute;
+  width: 80%;
+  height: 500px;
   overflow-y: auto;
+  margin-left: 100px;
 }
 .box {
   width: 100%;
-   margin:  0 auto;
+  margin:  0 auto;
 }
 .list {
   padding: 0;
@@ -75,10 +81,10 @@ export default {
   text-overflow: ellipsis;
   white-space: nowrap;
   list-style: none;
-  padding: 0 1rem;
   box-sizing: border-box;
-  height: 100px;
+  height: 50px;
   line-height: 70px;
+  border-radius: 5px;
   border: 1px solid #e7e7e7;
   background-color: lightpink;
 }
