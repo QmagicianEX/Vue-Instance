@@ -12,7 +12,12 @@
     <el-col :span="12">
       <i class="el-icon-arrow-up icon-style" @click="transitionUp" />
       <div class="out-div">
-        <div class="transition-div" style="transition: transform 1s; width: 58px; height: 60px; border-radius: 5px; border: 1px solid #409eff">1</div>
+        <div class="transition-div" style="transition: transform 1s">
+          <div v-for="(item, index) in all" :key="index">
+            <img :src="item.url" class="inner-img">
+          </div>
+        </div>
+        <!-- <div class="transition-div" style="transition: transform 1s; width: 58px; height: 60px; border-radius: 5px; border: 1px solid #409eff">1</div> -->
       </div>
       <i class="el-icon-arrow-down icon-style" @click="transitionDown" />
     </el-col>
@@ -91,15 +96,15 @@ export default {
     },
 
     transitionUp() {
-      this.transitionTimes > 0 ? this.transitionTimes -= 1 : ''
+      this.transitionTimes !== 5 - this.all.length ? this.transitionTimes -= 1 : ''
       let e = document.getElementsByClassName('transition-div')[0]
-      e.style.transform = 'translateY(' + this.transitionTimes * 60 + 'px)'
+      e.style.transform = 'translateY(' + this.transitionTimes * 64 + 'px)'
     },
 
     transitionDown() {
-      this.transitionTimes += 1
+      this.transitionTimes < 0 ? this.transitionTimes += 1 : ''
       let e = document.getElementsByClassName('transition-div')[0]
-      e.style.transform = 'translateY(' + this.transitionTimes * 60 + 'px)'
+      e.style.transform = 'translateY(' + this.transitionTimes * 64 + 'px)'
     }
   }
 }
