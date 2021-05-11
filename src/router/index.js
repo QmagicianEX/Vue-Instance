@@ -52,6 +52,11 @@ const routes = [
     path: '/VmodelObject',
     name: 'VmodelObject',
     component: () => import('@/components/VmodelObject')
+  },
+  {
+    path: '/InfiniteScroll',
+    name: 'InfiniteScroll',
+    component: () => import('@/components/InfiniteScroll')
   }
 ]
 
