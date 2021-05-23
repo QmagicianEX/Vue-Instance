@@ -62,6 +62,11 @@ const routes = [
     path: '/Transition',
     name: 'Transition',
     component: () => import('@/components/Transition')
+  },
+  {
+    path: '/Cascader',
+    name: 'Cascader',
+    component: () => import('@/components/Cascader')
   }
 ]
 

@@ -71,6 +71,11 @@ export default {
           description: '平滑过渡',
           link: '/Transition'
         },
+        {
+          function: '级联选择',
+          description: '级联选择',
+          link: '/Cascader'
+        },
         ]
     };
   },
