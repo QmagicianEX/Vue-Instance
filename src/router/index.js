@@ -67,6 +67,16 @@ const routes = [
     path: '/Cascader',
     name: 'Cascader',
     component: () => import('@/components/Cascader')
+  },
+  {
+    path: '/Qrcode',
+    name: 'Qrcode',
+    component: () => import('@/components/Qrcode')
+  },
+  {
+    path: '/VueEsign',
+    name: 'VueEsign',
+    component: () => import('@/components/VueEsign')
   }
 ]
 

@@ -76,6 +76,16 @@ export default {
           description: '级联选择',
           link: '/Cascader'
         },
+        {
+          function: '手写签名',
+          description: '手写签名',
+          link: '/VueEsign'
+        },
+        {
+          function: '二维码',
+          description: '手机扫描二维码，执行相关操作',
+          link: '/Qrcode'
+        },
         ]
     };
   },

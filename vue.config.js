@@ -3,7 +3,7 @@ module.exports = {
     outputDir: 'dist',
     assetsDir: 'static',
     devServer: {
-        host: 'localhost',
+        host: '0.0.0.0',
         port: 9999,
         https: false,
         open: true
