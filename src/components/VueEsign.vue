@@ -14,6 +14,9 @@
 </template>
 
 <script>
+
+import API from '@/api'
+
 export default {
   name: 'App',
   data () {
@@ -30,6 +33,9 @@ export default {
       this.$refs.esign.reset()
     },
     handleGenerate () {
+      API.COMMON.apiTest(window.location.href.split('=')[1]).then(res => {
+        alert(res)
+      })
       this.$refs.esign.generate().then(res => {
         this.resultImg = res
       }).catch(err => {

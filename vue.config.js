@@ -6,6 +6,15 @@ module.exports = {
         host: '0.0.0.0',
         port: 9999,
         https: false,
-        open: true
-    }
+        proxy: {
+          '/api': {
+            target: 'http://192.168.205.1:8084',
+            changeOrigin: true,
+            secure: false,
+            pathRewrite: {
+              '^/api': ''
+            }
+          }
+        }
+      }
 }

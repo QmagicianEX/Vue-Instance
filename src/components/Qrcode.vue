@@ -19,7 +19,7 @@ export default {
     const qr = new QRcode('qrcode', {
       width: 150,
       height: 150,
-      text: 'http://192.168.0.101:9999/#/VueEsign',
+      text: 'http://192.168.0.101:9999/#/VueEsign?id=123',
       colorDark : "#000",
       colorLight : "#fff"
     })
