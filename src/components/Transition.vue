@@ -22,7 +22,8 @@
       <i class="el-icon-arrow-down icon-style" @click="transitionDown" />
     </el-col>
     <div style="position: fixed; bottom:20px; left: 38%;">
-			<el-button type="primary" style="margin-right:200px;" @click="$router.push('/')">home</el-button>
+      <el-button type="primary" style="margin-right:200px;" @click="$router.push('/')">home</el-button>
+      <el-button type="primary" @click="$router.push('/Cascader')">next</el-button>
     </div>
   </div>
 </template>
