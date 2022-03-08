@@ -86,6 +86,31 @@ export default {
           description: '手机扫描二维码，执行相关操作',
           link: '/Qrcode'
         },
+        {
+          function: '图片预览',
+          description: '点击图片进行预览，可放大缩小等',
+          link: '/ImagePreview'
+        },
+        {
+          function: '拖拽',
+          description: '拖拽',
+          link: '/Drag'
+        },
+        {
+          function: '日期选择',
+          description: '日期选择',
+          link: '/VDatePicker'
+        },
+        {
+          function: '日历表格',
+          description: '日历表格',
+          link: '/Calendar'
+        },
+        {
+          function: 'html页面转pdf并下载',
+          description: 'html页面转pdf并下载',
+          link: '/Html2canvas'
+        },
         ]
     };
   },

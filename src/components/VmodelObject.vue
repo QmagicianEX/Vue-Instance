@@ -12,6 +12,15 @@
 
       </el-form-item>
 
+      <el-form-item label="密码框自动填充测试" prop="password">
+        <el-input type="password" v-model="form.password" auto-complete="new-password"></el-input>
+      </el-form-item>
+
+      <el-form-item label="密码" prop="password">
+        <el-input v-model="form.password2" :class="{'circle-style': isShowPlaintext}">
+          <i slot="suffix" class="el-icon-view el-input__icon" @click="isShowPlaintext=!isShowPlaintext" />
+        </el-input>
+      </el-form-item>
 
       <el-button @click="isShowMore = !isShowMore">
         更多
@@ -39,6 +48,15 @@
       <el-button>取消</el-button>
     </el-col>
     <el-button type="primary" style="margin-right:200px;" @click="$router.push('/')">home</el-button>
+
+    <el-form ref="test-form" :model="testForm" :rules="rules">
+      <el-form-item :label="'test'" prop="test.input1">
+        <el-input v-model="testForm.test.input1"></el-input>
+      </el-form-item>
+      <el-form-item :label="'test'" prop="test.input2">
+        <el-input v-model="testForm.test.input2"></el-input>
+      </el-form-item>
+    </el-form>
   </div>
 </template>
 
@@ -57,10 +75,23 @@ export default {
       },
       allAttributes:[],
       form: {
+        password: '',
+        password2: '',
         requiredAttributes: [],
         optionsAttributes: [],
       },
-      isShowMore: false
+      isShowMore: false,
+      isShowPlaintext: true,
+      testForm: {
+        test: {
+          input1: '',
+          input2: ''
+        }
+      },
+      rules: {
+        'test.input1': { required: true, message: '必填项', trigger: 'blur' },
+        'test.input2': { required: true, message: '必填项', trigger: 'blur' },
+      }
     }
   },
   created() {
@@ -132,4 +163,9 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+.circle-style {
+  /deep/ .el-input__inner {
+    -webkit-text-security: disc !important
+  }
+}
 </style>
