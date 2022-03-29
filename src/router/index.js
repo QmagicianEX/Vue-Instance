@@ -102,6 +102,11 @@ const routes = [
     path: '/Html2canvas',
     name: 'Html2canvas',
     component: () => import('@/components/Html2canvas')
+  },
+  {
+    path: '/DataSelect',
+    name: 'DataSelect',
+    component: () => import('@/components/DataSelect')
   }
 ]
 

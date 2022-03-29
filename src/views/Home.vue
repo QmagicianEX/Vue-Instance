@@ -111,6 +111,11 @@ export default {
           description: 'html页面转pdf并下载',
           link: '/Html2canvas'
         },
+        {
+          function: '数据选择',
+          description: '数据选择',
+          link: '/DataSelect'
+        },
         ]
     };
   },
