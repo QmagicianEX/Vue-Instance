@@ -10,10 +10,6 @@ import 'element-ui/lib/theme-chalk/index.css'
 import vueEsign from 'vue-esign'
 Vue.use(vueEsign)
 
-// import QmagicianUI from 'qmagician-ui'
-import 'qmagician-ui/lib/qmagician-ui.css'
-// Vue.use(QmagicianUI)
-
 import 'viewerjs/dist/viewer.css'
 import VueViewer from 'v-viewer'
 Vue.use(VueViewer)
