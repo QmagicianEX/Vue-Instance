@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <h1>Vue 项目功能实例</h1>
-
+    <select-popover></select-popover>
     <el-table :data="tableData" border style="width: 80%; margin-left: 10%;" >
       <el-table-column prop="function" label="功能" min-width="20%" align="center">
       </el-table-column>
