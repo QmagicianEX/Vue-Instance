@@ -1,7 +1,6 @@
 <template>
   <div class="home">
     <h1>Vue 项目功能实例</h1>
-
     <el-table :data="tableData" border style="width: 80%; margin-left: 10%;" >
       <el-table-column prop="function" label="功能" min-width="20%" align="center">
       </el-table-column>
@@ -85,6 +84,36 @@ export default {
           function: '二维码',
           description: '手机扫描二维码，执行相关操作',
           link: '/Qrcode'
+        },
+        {
+          function: '图片预览',
+          description: '点击图片进行预览，可放大缩小等',
+          link: '/ImagePreview'
+        },
+        {
+          function: '拖拽',
+          description: '拖拽',
+          link: '/Drag'
+        },
+        {
+          function: '日期选择',
+          description: '日期选择',
+          link: '/VDatePicker'
+        },
+        {
+          function: '日历表格',
+          description: '日历表格',
+          link: '/Calendar'
+        },
+        {
+          function: 'html页面转pdf并下载',
+          description: 'html页面转pdf并下载',
+          link: '/Html2canvas'
+        },
+        {
+          function: '数据选择',
+          description: '数据选择',
+          link: '/DataSelect'
         },
         ]
     };

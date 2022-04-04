@@ -77,6 +77,36 @@ const routes = [
     path: '/VueEsign',
     name: 'VueEsign',
     component: () => import('@/components/VueEsign')
+  },
+  {
+    path: '/ImagePreview',
+    name: 'ImagePreview',
+    component: () => import('@/components/ImagePreview')
+  },
+  {
+    path: '/Drag',
+    name: 'Drag',
+    component: () => import('@/components/ZoomPictureDrag')
+  },
+  {
+    path: '/VDatePicker',
+    name: 'VDatePicker',
+    component: () => import('@/components/VDatePicker')
+  },
+  {
+    path: '/Calendar',
+    name: 'Calendar',
+    component: () => import('@/components/Calendar/main.vue')
+  },
+  {
+    path: '/Html2canvas',
+    name: 'Html2canvas',
+    component: () => import('@/components/Html2canvas')
+  },
+  {
+    path: '/DataSelect',
+    name: 'DataSelect',
+    component: () => import('@/components/DataSelect')
   }
 ]
 
