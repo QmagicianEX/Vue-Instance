@@ -1,7 +1,7 @@
 <template>
   <div>
     <div>级联选择</div>
-    <div class="select-out-div" style="margin: 20px auto; width: 700px; height: 500px; border: 1px solid #d9d9d9; overflow: scroll; position: relative">
+    <div class="select-out-div" style="margin: 0 auto; width: 700px; height: 460px; border: 1px solid #d9d9d9; overflow: scroll; position: relative">
       <!-- <el-scrollbar style="height:100%" class="scrollbar"> -->
         <!-- <img src="../assets/images/img3.jpeg"> -->
         <div style="display: flex">
@@ -19,6 +19,10 @@
           </div>
         </div>
       <!-- </el-scrollbar> -->
+    </div>
+    <div style="position: fixed; bottom:20px; left: 38%;">
+      <el-button type="primary" style="margin-right:200px;" @click="$router.push('/')">home</el-button>
+      <el-button type="primary" @click="$router.push('/VueEsign')">next</el-button>
     </div>
   </div>
 </template>

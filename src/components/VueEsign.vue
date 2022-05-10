@@ -10,6 +10,10 @@
     <div class="esigh-result">
       <img v-if="resultImg" :src="resultImg" alt="">
     </div>
+    <div style="left: 38%;">
+      <el-button type="primary" style="margin-right:200px;" @click="$router.push('/')">home</el-button>
+      <el-button type="primary" @click="$router.push('/Qrcode')">next</el-button>
+    </div>
   </div>
 </template>
 
