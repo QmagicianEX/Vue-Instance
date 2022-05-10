@@ -14,3 +14,4 @@ debug.log
 /*.development
 /*.env.development
 /.env.development
+/.temp
