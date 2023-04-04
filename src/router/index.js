@@ -107,6 +107,11 @@ const routes = [
     path: '/DataSelect',
     name: 'DataSelect',
     component: () => import('@/components/DataSelect')
+  },
+  {
+    path: '/LazyLoad',
+    name: 'LazyLoad',
+    component: () => import('@/components/LazyLoad')
   }
 ]
 

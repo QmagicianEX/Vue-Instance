@@ -1,6 +1,9 @@
 <template>
   <div class="home">
     <h1>Vue 项目功能实例</h1>
+    <div>
+      <el-button @click="apiTest">接口测试</el-button>
+    </div>
     <el-table :data="tableData" border style="width: 80%; margin-left: 10%;" >
       <el-table-column prop="function" label="功能" min-width="20%" align="center">
       </el-table-column>
@@ -115,6 +118,11 @@ export default {
           description: '数据选择',
           link: '/DataSelect'
         },
+        {
+          function: '懒加载',
+          description: '懒加载',
+          link: '/lazyLoad'
+        },
         ]
     };
   },
@@ -147,6 +155,11 @@ export default {
     {
       // console.log(row);
       this.$router.push({path:row.link});
+    },
+    apiTest() {
+      this.$axios.get("gpt/gpt/test").then(res=>{
+        console.log(res)
+      })
     }
   },
 }
