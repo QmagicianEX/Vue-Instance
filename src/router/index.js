@@ -112,6 +112,11 @@ const routes = [
     path: '/LazyLoad',
     name: 'LazyLoad',
     component: () => import('@/components/LazyLoad')
+  },
+  {
+    path: '/ClickTypeShow',
+    name: 'ClickTypeShow',
+    component: () => import('@/components/ClickTypeShow')
   }
 ]
 

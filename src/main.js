@@ -17,6 +17,9 @@ Vue.use(VueViewer)
 import vuePicturePreview from 'vue-picture-preview';
 Vue.component('Previewer', vuePicturePreview);
 
+import VueTypedJs from 'vue-typed-js'
+Vue.use(VueTypedJs)
+
 Vue.prototype.$axios = Axios
 Vue.use(ElementUI)
 Vue.config.productionTip = false
